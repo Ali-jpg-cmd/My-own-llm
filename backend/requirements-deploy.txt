@@ -1,0 +1,22 @@
+# FastAPI and web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Database (SQLite by default, SQLAlchemy ORM)
+sqlalchemy==2.0.23
+alembic==1.12.1
+
+# Authentication and security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# HTTP client
+httpx==0.25.2
+
+# Data validation
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Simple LLM fallback (for deployment)
+requests==2.31.0
