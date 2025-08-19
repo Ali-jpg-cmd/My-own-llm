@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-wheel-metadata/
+
+# Env/Secrets/DB
+.env
+backend/.env
+llm_api.db
+*.db
+
+# Models and large artifacts
+models/
+backend/models/
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Node (none required but future-proof)
+node_modules/
+**/dist/
+**/build/
+
+

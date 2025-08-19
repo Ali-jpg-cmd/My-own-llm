@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  api:
+    build: ./backend
+    environment:
+      - DATABASE_URL=sqlite:///./llm_api.db
+      - SECRET_KEY=dev-secret-change-me
+      - JWT_SECRET=dev-jwt-secret-change-me
+      - LLM_PROVIDER=llamacpp
+      - LLM_MODEL_PATH=/app/models/TinyLlama-1.1B-Chat-v1.0.Q4_K_M.gguf
+      - LLM_CONTEXT_SIZE=4096
+      - LLM_N_GPU_LAYERS=0
+      - DEBUG=true
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./models:/app/models
+    restart: unless-stopped
