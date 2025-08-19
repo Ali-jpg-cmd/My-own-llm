@@ -53,7 +53,7 @@ class Settings(BaseSettings):
     price_per_1k_tokens: float = Field(default=0.0, env="PRICE_PER_1K_TOKENS")
     
     # CORS
-    allowed_origins: list = Field(default=["*"], env="ALLOWED_ORIGINS")
+    allowed_origins: list = Field(default=["*", "https://ali-jpg-cmd.github.io"], env="ALLOWED_ORIGINS")
     
     # Logging
     log_level: str = Field(default="INFO", env="LOG_LEVEL")
